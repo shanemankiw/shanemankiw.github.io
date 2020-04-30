@@ -1,0 +1,21 @@
+---
+layout: default
+call_to_action: Contact
+background_image_path:
+---
+
+{% if page.title %}
+	<div class="page-header">
+		<h2>{{ page.title }} Blogs</h2>
+	</div>
+{% endif %}
+
+<article class="content">
+	<p class="editable">You're currently looking at blogs categorised under <strong>{{ page.title }}</strong>. <a href="{{ site.baseurl }}/blogs/">View all blogs</a> instead.</p>
+
+	<ol class="post-list">
+		{% for post in page.posts %}
+			{% include post-summary.html post=post %}
+		{% endfor %}
+	</ol>
+</article>
