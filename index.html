@@ -1,0 +1,35 @@
+---
+title:
+call_to_action: Contact
+background_image_path:
+large_header: false
+testimonials:
+  - message: Should've stayed in bed today. I much prefer the mundane.
+    image: /uploads/courtney.jpg
+    name: Courtney Barnett
+  - message: Go to the waves of grain in the center of the state.Go away.Go to a parking lot, sit on the ground, and cry.You'll never know why.
+    image: /uploads/microcastle.jpg
+    name: Deerhunter
+  - message: Uh, Hey, Joe, I heard you shot your old lady down, you shot her down on the ground.
+    image: /uploads/jimi.jpg
+    name: Jimi Hendrix
+_options:
+  image:
+    width: 100
+    height: 100
+---
+
+<div class="editable">
+	<p>This blog is named after my nickname <strong>John</strong>. This blog has absolutely no useful information. Leave! Now!</p>
+
+	<p>Well, since you chose to stay, you have officially, wasted 20 seconds of your life. Take that.</p>
+</div>
+
+<div class="testimonials">
+	{% for testimonial in page.testimonials %}
+		<blockquote class="testimonial">
+			<p class="testimonial-message">{{ testimonial.message }}</p>
+			<p class="testimonial-author"><img src="{% include relative-src.html src=testimonial.image %}" alt="Photo of {{ testimonial.name }}"> {{ testimonial.name }}</p>
+		</blockquote>
+	{% endfor %}
+</div>

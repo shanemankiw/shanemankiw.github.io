@@ -1,0 +1,42 @@
+---
+title: About
+call_to_action: Contact
+background_image_path:
+large_header: false
+show_in_navigation: true
+navigation_order: 1
+---
+
+<div class="editable">
+	<p>
+		I am an junior student majoring in Information Engineering, EE Department. I am currently working on topics such as computer vision, video coding and 3D vision.
+		I use this blog to keep a record on my research, interests, resources and personal preferences. Feel free to contact me by email if you have any question. 
+	</p>
+
+	<p>
+		I go by these two names below.
+	</p>
+</div>
+
+<p class="editor-link"><a href="cloudcannon:collections/_staff_members" class="btn"><strong>&#9998;</strong> Update Staff Members</a></p>
+
+<ul class="staff-list">
+	{% for member in site.staff_members %}
+		<li class="staff">
+			<div class="staff-details">
+				<div class="staff-image">
+					<img src="{{ member.image }}" alt="Staff photo for {{ member.name }}" width="120" height="120">
+				</div>
+				<ul class="staff-info">
+					<li>{{ member.name }}</li>
+					<li><small>{{ member.credentials }}</small></li>
+					<li><a href="tel:{{ site.data.company.contact_phone_number }}">{{ site.data.company.contact_phone_number }}</a>  ext {{ member.phone_extension }}</li>
+				</ul>
+			</div>
+
+			<div class="staff-bio">
+				<p>{{ member.content | markdownify }}</p>
+			</div>
+		</li>
+	{% endfor %}
+</ul>
