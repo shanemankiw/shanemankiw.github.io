@@ -1,0 +1,1 @@
+MOVE /Y ./_site/category/* ./
