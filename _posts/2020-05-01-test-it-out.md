@@ -13,4 +13,4 @@ large_header: false
 Why the categories are not born yet???
 
 
-![](/uploads/JAChrisSquireMC.jpg){: width="600" height="600"}
+![](/uploads/ChrisSquire.jpg){: width="600" height="600"}
