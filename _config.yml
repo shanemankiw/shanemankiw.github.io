@@ -37,8 +37,8 @@ defaults:
       path: ""
     values:
       layout: page
-      background_image_path: /uploads/Manhatten.jpg
-      image: /uploads/Manhatten.jpg
+      background_image_path: /uploads/paristexas.jpg
+      image: /uploads/paristexas.jpg
   -
     scope:
       path: ""
