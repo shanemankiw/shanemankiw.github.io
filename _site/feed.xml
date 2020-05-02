@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://shanemankiw.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shanemankiw.github.io/" rel="alternate" type="text/html" /><updated>2020-05-02T01:37:12+00:00</updated><id>https://shanemankiw.github.io/feed.xml</id><title type="html">John</title><subtitle>Shanemankiw's personal homepage</subtitle><author><name>Shanemankiw</name><email>shanemankiw at sjtu dot edu dot cn</email></author><entry><title type="html">Papers on Bilateral &amp;amp; Smoothing Filtering</title><link href="https://shanemankiw.github.io/academic/3d/2020/05/02/smoothing-papers/" rel="alternate" type="text/html" title="Papers on Bilateral &amp; Smoothing Filtering" /><published>2020-05-02T01:36:00+00:00</published><updated>2020-05-02T01:36:00+00:00</updated><id>https://shanemankiw.github.io/academic/3d/2020/05/02/smoothing-papers</id><content type="html" xml:base="https://shanemankiw.github.io/academic/3d/2020/05/02/smoothing-papers/">&lt;h1 id=&quot;papers-on-bilateral--smoothing-filtering&quot;&gt;Papers on Bilateral &amp;amp; Smoothing Filtering&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://shanemankiw.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://shanemankiw.github.io/" rel="alternate" type="text/html" /><updated>2020-05-02T01:40:54+00:00</updated><id>https://shanemankiw.github.io/feed.xml</id><title type="html">John</title><subtitle>Shanemankiw's personal homepage</subtitle><author><name>Shanemankiw</name><email>shanemankiw at sjtu dot edu dot cn</email></author><entry><title type="html">Papers on Bilateral &amp;amp; Smoothing Filtering</title><link href="https://shanemankiw.github.io/academic/3d/2020/05/02/smoothing-papers/" rel="alternate" type="text/html" title="Papers on Bilateral &amp; Smoothing Filtering" /><published>2020-05-02T01:36:00+00:00</published><updated>2020-05-02T01:36:00+00:00</updated><id>https://shanemankiw.github.io/academic/3d/2020/05/02/smoothing-papers</id><content type="html" xml:base="https://shanemankiw.github.io/academic/3d/2020/05/02/smoothing-papers/">&lt;h3 id=&quot;papers-on-bilateral--smoothing-filtering&quot;&gt;Papers on Bilateral &amp;amp; Smoothing Filtering&lt;/h3&gt;
 
 &lt;p&gt;I am currently paying attention to edge-preserving filtering to enhance the performance of &lt;strong&gt;depth restoration&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;This blog will be updated constantly during this period!&lt;/p&gt;</content><author><name>Shanemankiw</name><email>shanemankiw at sjtu dot edu dot cn</email></author><summary type="html">Papers on Bilateral &amp;amp; Smoothing Filtering</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shanemankiw.github.io/assets/white.png" /></entry><entry><title type="html">About this blog</title><link href="https://shanemankiw.github.io/tips/2020/05/01/test-it-out/" rel="alternate" type="text/html" title="About this blog" /><published>2020-05-01T00:47:00+00:00</published><updated>2020-05-01T00:47:00+00:00</updated><id>https://shanemankiw.github.io/tips/2020/05/01/test-it-out</id><content type="html" xml:base="https://shanemankiw.github.io/tips/2020/05/01/test-it-out/">&lt;h1 id=&quot;about-the-blog&quot;&gt;About the Blog.&lt;/h1&gt;
+&lt;p&gt;This blog will be updated constantly during this period!&lt;/p&gt;</content><author><name>Shanemankiw</name><email>shanemankiw at sjtu dot edu dot cn</email></author><summary type="html">Papers on Bilateral &amp;amp; Smoothing Filtering</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://shanemankiw.github.io/assets/white.png" /></entry><entry><title type="html">About this blog</title><link href="https://shanemankiw.github.io/tips/2020/05/01/test-it-out/" rel="alternate" type="text/html" title="About this blog" /><published>2020-05-01T00:47:00+00:00</published><updated>2020-05-01T00:47:00+00:00</updated><id>https://shanemankiw.github.io/tips/2020/05/01/test-it-out</id><content type="html" xml:base="https://shanemankiw.github.io/tips/2020/05/01/test-it-out/">&lt;h3 id=&quot;about-the-blog&quot;&gt;About the Blog.&lt;/h3&gt;
 
 &lt;p&gt;I spent the last day and a half trying to build and polish this website. I came across a few annoying problems, and I think maybe I can share them with you guys. Also you can always email me if you have any questions about the usage of the template.&lt;/p&gt;
 
-&lt;h2 id=&quot;categories&quot;&gt;Categories&lt;/h2&gt;
+&lt;h4 id=&quot;categories&quot;&gt;Categories&lt;/h4&gt;
 
 &lt;p&gt;This is really annoying. The category folder that jekyll built, which is inside the ‘_sites’ folder, can’t be located by github server. It tends to regard the root of the project as ‘site.baseurl’, which is insane! In that case, the category page is always 404 on github server.&lt;/p&gt;
 
@@ -14,19 +14,19 @@
 
 &lt;p&gt;&lt;strong&gt;Somebody, please help me here.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;visits-counting&quot;&gt;Visits Counting&lt;/h2&gt;
+&lt;h4 id=&quot;visits-counting&quot;&gt;Visits Counting&lt;/h4&gt;
 
 &lt;p&gt;To count the visits, I use the javascript script written by &lt;strong&gt;busuanzi&lt;/strong&gt;,  instructed by &lt;a href=&quot;https://www.dazhuanlan.com/2019/12/05/5de7f1780d67f/&quot;&gt;this guy&lt;/a&gt;. So there is an extra ‘js’ folder in my repo. Yes, I learned some basic javascript, very basic.  So you can see a little footnote under every page.&lt;/p&gt;
 
 &lt;p&gt;F.Y.I., I didn’t count the visits of every post because they are unstable, as mentioned above.&lt;/p&gt;
 
-&lt;h2 id=&quot;others&quot;&gt;Others&lt;/h2&gt;
+&lt;h4 id=&quot;others&quot;&gt;Others&lt;/h4&gt;
 
 &lt;p&gt;Before all that, when I started to build this site, I spent a whole night decorating it and run it on my local server. It can only be run by the line ‘bundle exec jekyll …’  The setup of bundle needs to work on things like Gemfile or something like that. That’s kind of annoying.&lt;/p&gt;
 
 &lt;p&gt;Also it wasn’t until I came across the category problem did I actually realize, that local server is basically to change the website &lt;strong&gt;url&lt;/strong&gt; into a local host, and the &lt;strong&gt;baseurl&lt;/strong&gt; remains. I thought I solved the category problem by setting the baseurl as ‘shanemankiw.github.io’, yet it failed. It’s a fatal problem of github!&lt;/p&gt;
 
-&lt;h2 id=&quot;a-reminder&quot;&gt;A Reminder&lt;/h2&gt;
+&lt;h4 id=&quot;a-reminder&quot;&gt;A Reminder&lt;/h4&gt;
 
 &lt;p&gt;Just a reminder to y’all, I am completely in love with this template but there are a lot of problems with it. Just be careful.&lt;/p&gt;
 

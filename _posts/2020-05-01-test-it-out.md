@@ -8,11 +8,11 @@ image: /assets/white.png
 large_header: false
 ---
 
-# About the Blog.
+### About the Blog.
 
 I spent the last day and a half trying to build and polish this website. I came across a few annoying problems, and I think maybe I can share them with you guys. Also you can always email me if you have any questions about the usage of the template.
 
-## Categories
+#### Categories
 
 This is really annoying. The category folder that jekyll built, which is inside the '_sites' folder, can't be located by github server. It tends to regard the root of the project as 'site.baseurl', which is insane! In that case, the category page is always 404 on github server. 
 
@@ -20,19 +20,19 @@ I just don't have the money to use another server. So I pretend to solve this pr
 
 **Somebody, please help me here.**
 
-## Visits Counting
+#### Visits Counting
 
 To count the visits, I use the javascript script written by **busuanzi**,  instructed by [this guy](https://www.dazhuanlan.com/2019/12/05/5de7f1780d67f/). So there is an extra 'js' folder in my repo. Yes, I learned some basic javascript, very basic.  So you can see a little footnote under every page.
 
 F.Y.I., I didn't count the visits of every post because they are unstable, as mentioned above. 
 
-## Others
+#### Others
 
 Before all that, when I started to build this site, I spent a whole night decorating it and run it on my local server. It can only be run by the line 'bundle exec jekyll ...'  The setup of bundle needs to work on things like Gemfile or something like that. That's kind of annoying. 
 
 Also it wasn't until I came across the category problem did I actually realize, that local server is basically to change the website **url** into a local host, and the **baseurl** remains. I thought I solved the category problem by setting the baseurl as 'shanemankiw.github.io', yet it failed. It's a fatal problem of github! 
 
-## A Reminder
+#### A Reminder
 
 Just a reminder to y'all, I am completely in love with this template but there are a lot of problems with it. Just be careful. 
 

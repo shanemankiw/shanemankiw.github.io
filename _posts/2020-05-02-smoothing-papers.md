@@ -9,7 +9,7 @@ image: /assets/white.png
 large_header: false
 ---
 
-# Papers on Bilateral & Smoothing Filtering
+### Papers on Bilateral & Smoothing Filtering
 
 I am currently paying attention to edge-preserving filtering to enhance the performance of **depth restoration**.
 
