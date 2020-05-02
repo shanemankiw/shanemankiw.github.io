@@ -4,8 +4,8 @@ date: 2020-04-30 15:02:00 + 0800
 categories:
   - Leisure
   - Music
-author_staff_member: shanemankiw
-image: /uploads/JAMC.jpg
+author_staff_member: fae
+image: /assets/Leisure/JAMC.jpg
 large_header: false
 ---
 

@@ -1,0 +1,42 @@
+I"�
+<h1 id="about-the-blog">About the Blog.</h1>
+
+<p>I spent the last day and a half trying to build and polish this website. I came across a few annoying problems, and I think maybe I can share them with you guys. Also you can always email me if you have any questions about the usage of the template.</p>
+
+<h2 id="categories">Categories</h2>
+
+<p>This is really annoying. The category folder that jekyll built, which is inside the ‘_sites’ folder, can’t be located by github server. It tends to regard the root of the project as ‘site.baseurl’, which is insane! In that case, the category page is always 404 on github server.</p>
+
+<p>I just don’t have the money to use another server. So I pretend to solve this problem by manually moving the category folder to the root. That will do it, but every time I post something new or did some modifications, I have to take that extra step.</p>
+
+<p><strong>Somebody, please help me here.</strong></p>
+
+<h2 id="visits-counting">Visits Counting</h2>
+
+<p>To count the visits, I use the javascript script written by <strong>busuanzi</strong>,  instructed by <a href="https://www.dazhuanlan.com/2019/12/05/5de7f1780d67f/">this guy</a>. So there is an extra ‘js’ folder in my repo. Yes, I learned some basic javascript, very basic.  So you can see a little footnote under every page.</p>
+
+<p>F.Y.I., I didn’t count the visits of every post because they are unstable, as mentioned above.</p>
+
+<h2 id="others">Others</h2>
+
+<p>Before all that, when I started to build this site, I spent a whole night decorating it and run it on my local server. It can only be run by the line ‘bundle exec jekyll …’  The setup of bundle needs to work on things like Gemfile or something like that. That’s kind of annoying.</p>
+
+<p>Also it wasn’t until I came across the category problem did I actually realize, that local server is basically to change the website <strong>url</strong> into a local host, and the <strong>baseurl</strong> remains. I thought I solved the category problem by setting the baseurl as ‘shanemankiw.github.io’, yet it failed. It’s a fatal problem of github!</p>
+
+<h2 id="a-reminder">A Reminder</h2>
+
+<p>Just a reminder to y’all, I am completely in love with this template but there are a lot of problems with it. Just be careful.</p>
+
+<p>Also a reminder for myself: the steps I need to take to have a post:</p>
+
+<ol>
+  <li>Write a markdown.</li>
+  <li>Add the post head to the markdown with time and categories and other stuff. Rename it and put it in ‘_posts’.</li>
+  <li>Delete the category folder outside.</li>
+  <li>bundle exec jekyll build</li>
+  <li>Copy the inside category folder outside.</li>
+  <li>git add .</li>
+  <li>git commit -m “a new post”</li>
+  <li>git push origin master</li>
+</ol>
+:ET
