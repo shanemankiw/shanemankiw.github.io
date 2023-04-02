@@ -22,7 +22,7 @@ title: Jionghao ' s Blogs
 email: shanemankiw@qq.com
 description: >- # this means to ignore newlines until "baseurl:"
   Academic, or other interesting things.
-baseurl: "/blog.html" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://shanemankiw.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  shanemankiw
 #twitter_username: 
