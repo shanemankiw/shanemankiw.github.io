@@ -3,6 +3,7 @@ layout: post
 title:  "Hello World"
 date:   2023-04-02 20:15:52 +0800
 categories: [Misc]
+tags: [jekyll, html]
 ---
 Let's test code snippet:
 
