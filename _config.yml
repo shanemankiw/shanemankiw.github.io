@@ -29,13 +29,16 @@ github_username:  shanemankiw
 
 # Build settings
 theme: minima
-plugins:
-  - jekyll-archives
 
 # jekyll-archives
 jekyll-archives:
   enabled:
     - categories
+
+collections:
+  archives:
+    output: true
+    permalink: /archives/:path/
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
