@@ -3,7 +3,6 @@ layout: post
 title:  "Hello World"
 date:   2023-04-02 20:15:52 +0800
 categories: [Misc]
-tags: [jekyll, html]
 ---
 Let's test code snippet:
 
@@ -23,7 +22,7 @@ Then I want to try code snippet in Typora, see if this works:
 
 ```python
 def typora():
-    print('nice but expansive')
+    print('nice but expensive')
     return
 ```
 

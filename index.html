@@ -4,6 +4,12 @@ permalink: /blogs.html
 ---
 
 <div class="posts">
+  <div class="intro">
+    <p>
+      Hi all! Welcome to my blog! I will be posting about academic, coding, and hopefully some other interesting things.
+      I hope you find the content helpful. To know more about me, please refer to my <a href="{{ site.baseurl }}/index.html">personal website</a>.
+    </p>
+  </div>
   {% for post in paginator.posts %}
     <article class="post">
       <a href="{{ site.baseurl }}{{ post.url }}">
@@ -13,11 +19,11 @@ permalink: /blogs.html
           <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
         </div>
       </a>
-      <div class="entry">
+      <!-- <div class="entry">
         {{ post.excerpt }}
-      </div>
+      </div>  -->
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <!-- <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a> -->
     </article>
   {% endfor %}
 

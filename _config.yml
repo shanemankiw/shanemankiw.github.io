@@ -20,7 +20,7 @@
 
 title: Jionghao ' s Blogs
 description: >- # this means to ignore newlines until "baseurl:"
-  Academic, or other interesting things.
+  Jionghao's Blog Space.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://shanemankiw.github.io/blog.html" # the base hostname & protocol for your site, e.g. http://example.com
 avatar: /images/icon.png
