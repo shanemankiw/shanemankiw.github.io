@@ -28,7 +28,6 @@ github_username:  shanemankiw
 #twitter_username: 
 
 # Build settings
-theme: alembic-jekyll-theme
 remote_theme: daviddarnes/alembic@main
 plugins:
   - jekyll-remote-theme
