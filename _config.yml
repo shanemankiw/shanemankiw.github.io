@@ -28,17 +28,10 @@ github_username:  shanemankiw
 #twitter_username: 
 
 # Build settings
-theme: minima
-
-# jekyll-archives
-jekyll-archives:
-  enabled:
-    - categories
-
-collections:
-  archives:
-    output: true
-    permalink: /archives/:path/
+theme: alembic-jekyll-theme
+remote_theme: daviddarnes/alembic@main
+plugins:
+  - jekyll-remote-theme
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
