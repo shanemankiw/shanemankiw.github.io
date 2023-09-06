@@ -13,5 +13,9 @@ This will generate a new post md. After writing, just git commit and push.
 
 bundle exec jekyll serve --port 6006
 
+## Modify main page
+
+Make modifications in personal.html
+
 ## Credits
 Using the template from https://github.com/amitmerchant1990/reverie .
