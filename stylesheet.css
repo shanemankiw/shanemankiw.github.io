@@ -126,6 +126,13 @@ name {
   -webkit-transition: opacity .2s ease-in-out;
 }
 
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* This would vertically center the content if the container had a height larger than its content */
+  width: 100%; /* Makes sure the container spans the full width of its parent. Adjust if needed. */
+}
+
 span.highlight {
   background-color: #ffffd0;
 }
