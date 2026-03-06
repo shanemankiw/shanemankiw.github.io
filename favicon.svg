@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- pot -->
+  <path fill="#B8D4E3" d="M8 20h16v4c0 1.5-1 2-2 2H10c-1 0-2-.5-2-2v-4z"/>
+  <path fill="#9EC5D9" d="M10 22h12v2H10z"/>
+  <!-- cactus body -->
+  <path fill="#7EB8DA" d="M13 6v14c0 .8.7 1.5 1.5 1.5h3c.8 0 1.5-.7 1.5-1.5V6c0-.8-.7-1.5-1.5-1.5h-3C13.7 4.5 13 5.2 13 6z"/>
+  <!-- left arm -->
+  <path fill="#7EB8DA" d="M13 10H9c-.6 0-1 .4-1 1v2c0 .6.4 1 1 1h4V10z"/>
+  <!-- right arm -->
+  <path fill="#8BC0DF" d="M19 14h4c.6 0 1-.4 1-1v-2c0-.6-.4-1-1-1h-4v4z"/>
+</svg>

@@ -1,57 +1,367 @@
----
-layout: default
-permalink: /blogs.html
----
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="posts">
-  <div class="intro">
-    <p>
-      Hi all! Welcome to my blog! I will be posting about academic, coding, and hopefully some other interesting things.
-      I hope you find the content helpful. To know more about me, please refer to my <a href="{{ site.baseurl }}/index.html">personal website</a>.
-    </p>
-    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jionghao Wang (王炅昊)'s Homepage</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="description" content="Jionghao Wang's Homepage">
+  <meta name="google-site-verification" content="xKytw-gY1u7rDeq6j723N9_3DPR32Nz0y4TPNR0aips" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<!-- Statcounter -->
+<script type="text/javascript">
+  var sc_project = 13209083;
+  var sc_invisible = 1;
+  var sc_security = "76e269b1";
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<noscript>
+  <div class="statcounter">
+    <a title="Web Analytics" href="https://statcounter.com/" target="_blank" rel="noopener">
+      <img class="statcounter" src="https://c.statcounter.com/13209083/0/76e269b1/1/" alt="Web Analytics" referrerPolicy="no-referrer-when-downgrade">
+    </a>
   </div>
-  {% for post in paginator.posts %}
-    <article class="post">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        <h1>{{ post.title }}</h1>
+</noscript>
 
-        <div>
-          <p class="post_date">{{ post.date | date: "%B %e, %Y" }}</p>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">Jionghao Wang 王炅昊</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#internships">Internships</a></li>
+        <!-- <li><a href="#service">Service</a></li> -->
+        <li><a href="#teaching">Teaching</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero / About -->
+    <section class="hero fade-in" id="about">
+      <div class="hero-top">
+        <div class="hero-photo">
+          <img src="images/jionghao_headshot.jpg" alt="Jionghao Wang">
         </div>
-      </a>
-      <!-- <div class="entry">
-        {{ post.excerpt }}
-      </div>  -->
+        <div class="hero-info">
+          <h1>Jionghao Wang</h1>
+          <p class="bio">
+            I am a Ph.D. student at <a
+              href="https://aggie.graphics/">Aggies Graphics Group</a>, Texas A&M University, supervised by <a
+              href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html">Prof.
+              Wenping Wang</a> and <a href="https://people.tamu.edu/~xinli/">Prof. Xin
+              Li</a>. 
+              
+              Previously, I obtained my B.Eng. and M.Eng. degrees from Shanghai Jiao Tong University(SJTU), where I was
+              fortunate to be supervised by <a
+              href="https://medialab.sjtu.edu.cn/author/li-song/">Prof. Li Song</a>.
+          </p>
+          <div class="hero-links">
+            <a href="mailto:jionghaow99@gmail.com">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              Email
+            </a>
+            <a href="https://scholar.google.com/citations?user=tY_XFU8AAAAJ&hl=en" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+                <path
+                  d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
+                <path d="M12 18a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" fill="none" />
+              </svg>
+              Scholar
+            </a>
+            <a href="https://github.com/shanemankiw" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://x.com/ShaneMankiw" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="15" height="15">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+              Twitter
+            </a>
+            <a href="https://www.linkedin.com/in/jionghao-wang" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <!-- <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a> -->
-    </article>
-  {% endfor %}
+      <!-- <div class="hero-bottom">
+        <p class="research">
+          I am interested in <strong>Physics-based Humanoid Motion</strong> and <strong>Video-Action model</strong> for robotics.
+          During my PhD, I also worked on <strong>3D Generative Models</strong>. 
+        </p>
+      </div> -->
 
-  <!-- pagination -->
-  {% if paginator.total_pages > 1 %}
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-    {% else %}
-      <span>&laquo; Prev</span>
-    {% endif %}
+    </section>
 
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <span class="webjeda">{{ page }}</span>
-      {% elsif page == 1 %}
-        <a href="{{ '/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-      {% else %}
-        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
+    <!-- News -->
+    <section class="section fade-in" id="news">
+      <h2 class="section-title">News</h2>
+      <div class="news-box">
+        <ul class="news-list">
+          <li class="news-item"><span class="news-date">AUG 2025</span> Wrapped up my amazing time with Sony, then presented at SIGGRAPH 2025 in Vancouver, Canada! 🇨🇦</li>
+          <li class="news-item"><span class="news-date">MAY 2025</span> Started as a research intern at Sony in San Jose, CA! 🎮</li>
+          <li class="news-item"><span class="news-date">OCT 2024</span> Attended ECCV 2024 in Milan, Italy! 🇮🇹</li>
+          <li class="news-item"><span class="news-date">JUL 2024</span> SO-SMPL is accepted by ECCV 2024. Thanks to all collaborators! 🎉</li>
+          <li class="news-item"><span class="news-date">AUG 2024</span> Started as a Ph.D. student in Texas A&M! Gig 'em! 🎓</li>
+          <li class="news-item"><span class="news-date">MAR 2024</span> Obtained my Masters degree from SJTU! Grateful for the amazing time! 🎓</li>
+          <li class="news-item"><span class="news-date">FEB 2024</span> Started as a research intern at miHoYo in Shanghai! ✨</li>
+        </ul>
+      </div>
+    </section>
 
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% else %}
-      <span>Next &raquo;</span>
-    {% endif %}
-  </div>
-  {% endif %}
-</div>
+    <!-- Publications -->
+    <section class="section fade-in" id="publications">
+      <h2 class="section-title">Publications <span style="font-size: 17px; font-weight: 400; color: #9e9eb0;">(* equal
+          contribution)</span></h2>
+
+      <div class="pub-list">
+
+        <div class="pub-item">
+          <img class="pub-thumb" src="images/teaser_crop.gif" alt="PDT">
+          <div class="pub-content">
+            <div class="pub-title"><a href="https://arxiv.org/abs/2507.18939" target="_blank">PDT: Point Distribution Transformation with Diffusion Models</a></div>
+            <div class="pub-authors"><span class="me">Jionghao Wang</span>*, <a href="https://clinplayer.github.io/" target="_blank">Cheng Lin*</a>, <a href="https://liuyuan-pal.github.io/" target="_blank">Yuan Liu</a>, <a href="https://ruixu.me/" target="_blank">Rui Xu</a>, <a href="https://frank-zy-dou.github.io/" target="_blank">Zhiyang Dou</a>, <a href="https://www.xxlong.site/" target="_blank">Xiao-Xiao Long</a>, <a href="https://haoxiangguo.cn/" target="_blank">Hao-Xiang Guo</a>, <a href="https://i.cs.hku.hk/~taku/" target="_blank">Taku Komura</a>, <a href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html" target="_blank">Wenping Wang</a>, <a href="https://people.tamu.edu/~xinli/" target="_blank">Xin Li</a></div>
+            <div class="pub-links">
+              <span class="venue-label">SIGGRAPH 2025</span> <span class="sep">/</span>
+              <a href="https://arxiv.org/abs/2507.18939" target="_blank">Paper</a><span class="sep">/</span>
+              <a href="https://shanemankiw.github.io/PDT/" target="_blank">Project</a><span class="sep">/</span>
+              <a href="https://github.com/shanemankiw/PDT" target="_blank">Github</a>
+            </div>
+            <p class="pub-abstract">PDT is a novel diffusion-based framework for transforming dense point distribution into a target distribution that is semantically meaningful.</p>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <img class="pub-thumb" src="images/SO-SMPL.gif" alt="SO-SMPL">
+          <div class="pub-content">
+            <div class="pub-title"><a href="https://arxiv.org/abs/2312.05295" target="_blank">Disentangled Clothed Avatar Generation from Text Descriptions</a></div>
+            <div class="pub-authors"><span class="me">Jionghao Wang</span>*, <a href="https://liuyuan-pal.github.io/" target="_blank">Yuan Liu*</a>, <a href="https://frank-zy-dou.github.io/" target="_blank">Zhiyang Dou</a>, <a href="https://yzmblog.github.io/" target="_blank">Zhengming Yu</a>, <a href="https://lyq.me/scholar" target="_blank">Yongqing Liang</a>, <a href="https://clinplayer.github.io/" target="_blank">Cheng Lin</a>, <a href="https://medialab.sjtu.edu.cn/" target="_blank">Rong Xie</a>, <a href="https://medialab.sjtu.edu.cn/author/li-song/" target="_blank">Li Song</a>, <a href="https://people.tamu.edu/~xinli/" target="_blank">Xin Li</a>, <a href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html" target="_blank">Wenping Wang</a></div>
+            <div class="pub-links">
+              <span class="venue-label">ECCV 2024</span> <span class="sep">/</span>
+              <a href="https://arxiv.org/abs/2312.05295" target="_blank">Paper</a><span class="sep">/</span>
+              <a href="https://shanemankiw.github.io/SO-SMPL/" target="_blank">Project</a><span class="sep">/</span>
+              <a href="https://github.com/shanemankiw/SO-SMPL" target="_blank">Github</a>
+            </div>
+            <p class="pub-abstract">In this paper, we introduced a novel text-to-avatar generation method that separately generates the human body and the clothes and allows high-quality animation on the generated avatar.</p>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-thumb pub-thumb-video">
+            <video muted autoplay loop playsinline>
+              <source src="images/PanoDiff.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="pub-content">
+            <div class="pub-title"><a href="https://arxiv.org/abs/2308.14686" target="_blank">360-Degree Panorama Generation from Few Unregistered NFoV Images</a></div>
+            <div class="pub-authors"><span class="me">Jionghao Wang</span>*, <span>Ziyu Chen*</span>, <span>Jun Ling</span>, <span>Rong Xie</span>, <a href="https://medialab.sjtu.edu.cn/author/li-song/" target="_blank">Li Song</a></div>
+            <div class="pub-links">
+              <span class="venue-label">ACM Multimedia 2023</span> <span class="sep">/</span>
+              <a href="https://dl.acm.org/doi/abs/10.1145/3581783.3612508" target="_blank">Paper</a><span class="sep">/</span>
+              <a href="https://github.com/shanemankiw/Panodiff" target="_blank">Github</a><span class="sep">/</span>
+              <a href="https://youtu.be/CGqEnUzpWWQ?si=KRyapkI8_2WiYDfD" target="_blank">Video</a>
+            </div>
+            <p class="pub-abstract">We proposed a novel diffusion-based pipeline that generates complete 360 panoramas using one or more unregistered NFoV images captured from arbitrary angles.</p>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-thumb pub-thumb-video">
+            <video muted autoplay loop playsinline>
+              <source src="images/rss_teaser_h264.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="pub-content">
+            <div class="pub-title">Learning What Matters: Adaptive Information Theoretic Objectives for Robot Exploration</div>
+            <div class="pub-authors"><a href="https://www.youwei-yu.com/" target="_blank">Youwei Yu</a>, <span class="me">Jionghao Wang</span>, <a href="https://yzmblog.github.io/" target="_blank">Zhengming Yu</a>, <a href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html" target="_blank">Wenping Wang</a>, <a href="https://vail-robotics.net/" target="_blank">Lantao Liu</a></div>
+            <div class="pub-links">
+              <span class="venue-label">In Submission</span>
+            </div>
+            <p class="pub-abstract">Developed QOED to enhance robot exploration by isolating identifiable model parameters and suppressing unidentifiable 'nuisance' directions in high-dimensional systems.</p>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <img class="pub-thumb" src="images/teaser_refine_spgen.png" alt="SPGen">
+          <div class="pub-content">
+            <div class="pub-title"><a href="https://arxiv.org/abs/2509.12721" target="_blank">SPGen: Spherical Projection as Consistent and Flexible Representation for Single Image 3D Shape Generation</a></div>
+            <div class="pub-authors"><a href="https://evergreen0929.github.io/" target="_blank">Jingdong Zhang</a>, <a href="https://chenweikai.github.io/" target="_blank">Weikai Chen</a>, <a href="https://liuyuan-pal.github.io/" target="_blank">Yuan Liu</a>, <span class="me">Jionghao Wang</span>, <a href="https://yzmblog.github.io/" target="_blank">Zhengming Yu</a>, <a href="https://mickshen7558.github.io/" target="_blank">Zhuowen Shen</a>, <a href="https://sites.google.com/site/boyanghome/home" target="_blank">Bo Yang</a>, <a href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html" target="_blank">Wenping Wang</a>, <a href="https://people.tamu.edu/~xinli/" target="_blank">Xin Li</a></div>
+            <div class="pub-links">
+              <span class="venue-label">SIGGRAPH Asia 2025</span> <span class="sep">/</span>
+              <a href="https://arxiv.org/abs/2509.12721" target="_blank">Paper</a><span class="sep">/</span>
+              <a href="https://evergreen0929.github.io/projects/spgen.html" target="_blank">Project</a><span class="sep">/</span>
+              <a href="https://github.com/Evergreen0929/Spherical-Projection-Shape-Generation" target="_blank">Github</a>
+            </div>
+            <p class="pub-abstract">SPGen leverages Spherical Projection (SP) to generate high-quality 3D shapes with diffusion models.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Internships -->
+    <section class="section fade-in" id="internships">
+      <h2 class="section-title">Internships</h2>
+
+      <div class="cards">
+        <article class="card compact">
+          <div class="card-media logo">
+            <img src="images/Sony.png" alt="Sony logo" />
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-title">Research Intern</h3>
+              <span class="badge">2025 • San Jose, CA</span>
+            </div>
+            <p class="desc">Sony Corporation of America.</p>
+          </div>
+        </article>
+
+        <article class="card compact">
+          <div class="card-media logo">
+            <img src="images/mihoyo.png" alt="miHoYo logo" />
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-title">Research Intern</h3>
+              <span class="badge">2024 • Shanghai, CN</span>
+            </div>
+            <p class="desc">miHoYo (HoYoverse).</p>
+          </div>
+        </article>
+
+        <article class="card compact">
+          <div class="card-media logo">
+            <img src="images/intel.png" alt="Intel logo" />
+          </div>
+          <div class="card-body">
+            <div class="card-top">
+              <h3 class="card-title">Media Graphics Software Engineering Intern</h3>
+              <span class="badge">2021 • Shanghai, CN</span>
+            </div>
+            <p class="desc">Intel Asia Pacific Development.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Service -->
+    <!-- <section class="section fade-in" id="service">
+      <h2 class="section-title">Service</h2>
+      <div class="service-section">
+        <h3>Reviewer</h3>
+        <ul class="service-list">
+          <li><em>International Journal of Robotics Research (IJRR)</em></li>
+          <li><em>IEEE Robotics and Automation Letters (RA‑L)</em></li>
+          <li>Robotics: Science and Systems (RSS)</li>
+          <li>IEEE International Conference on Robotics and Automation (ICRA)</li>
+          <li>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</li>
+          <li>Conference on Robot Learning (CoRL)</li>
+        </ul>
+      </div>
+    </section> -->
+
+    <!-- Teaching -->
+    <section class="section fade-in" id="teaching">
+      <h2 class="section-title">Teaching</h2>
+
+      <div class="teaching-grid">
+        <div class="teaching-item">
+          <div class="teaching-course">CSCE 611 Operating Systems</div>
+          <div class="teaching-meta">Teaching Assistant · Texas A&M · Spring 2026
+          </div>
+        </div>
+        <div class="teaching-item">
+          <div class="teaching-course">CSCE 671 Human-Computer Interaction</div>
+          <div class="teaching-meta">Teaching Assistant · Texas A&M · Fall 2025
+          </div>
+        </div>
+        <div class="teaching-item">
+          <div class="teaching-course">VIST 172/173 Foundations of Visual Computing I & II</div>
+          <div class="teaching-meta">Teaching Assistant · Texas A&M · Fall 2024 & Spring 2025
+          </div>
+        </div>
+        <div class="teaching-item">
+          <div class="teaching-course">VIST 272 Visual Computing</div>
+          <div class="teaching-meta">Teaching Assistant · Texas A&M · Fall 2024
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      © 2026 Jionghao Wang. Template from <a href="https://jiahui-fu.github.io/" target="_blank">Jiahui Fu</a>.
+      <p class="footer-wechat">WeChat: wangjionghao99</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('nav-links').classList.toggle('open');
+    });
+    document.querySelectorAll('#nav-links a').forEach(a =>
+      a.addEventListener('click', () => document.getElementById('nav-links').classList.remove('open'))
+    );
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+    });
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+    // Typewriter effect for browser tab title (skip for search bots)
+    if (!/bot|crawl|spider|slurp|googlebot|bingbot/i.test(navigator.userAgent)) {
+      const titleText = "Jionghao Wang";
+      document.title = "\u200B";
+      let titleIndex = 0;
+      function typeTitle() {
+        document.title = titleText.substring(0, titleIndex + 1);
+        titleIndex++;
+        if (titleIndex < titleText.length) {
+          setTimeout(typeTitle, 50);
+        }
+      }
+      setTimeout(typeTitle, 100);
+    }
+  </script>
+
+</body>
+
+</html>
