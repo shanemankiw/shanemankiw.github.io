@@ -3,17 +3,21 @@
 
 /* ===== Variables & Reset ===== */
 :root {
-  --bg: #fafafa;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f7f8fc;
-  --text: #1a1a2e;
-  --text-secondary: #3d3d56;
-  --text-muted: #7e7e9a;
-  --accent: #2563eb;
-  --accent-soft: rgba(37, 99, 235, 0.07);
-  --accent-hover: #1d4ed8;
-  --border: #e5e5ed;
-  --nav-bg: rgba(168, 208, 243, 0.88);
+  /* Warm Sand / Champagne (light background, deeper beige layers) */
+  --bg: #fdfaf4;
+  --bg-card: #fffdf8;
+  --bg-card-hover: #eedcc7;
+  --text: #2b241b;
+  --text-secondary: #4a3f32;
+  --text-muted: #7a6b58;
+
+  /* Accent: deeper champagne */
+  --accent: #b58b4b;
+  --accent-soft: rgba(181, 139, 75, 0.16);
+  --accent-hover: #9c743b;
+
+  --border: #dcc7ad;
+  --nav-bg: rgba(251, 246, 238, 0.9);
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
   --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   --radius: 8px;
@@ -392,7 +396,7 @@ main {
 }
 
 .pub-authors .me {
-  color: #000;
+  color: var(--text);
   font-weight: 600;
 }
 
@@ -403,7 +407,7 @@ main {
 }
 
 .pub-venue .award {
-  color: #d97706;
+  color: var(--accent);
   font-weight: 600;
   font-style: normal;
 }
