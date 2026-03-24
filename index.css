@@ -1,33 +1,6 @@
 /* ===== Web Fonts ===== */
 @import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@400;700&display=swap');
 
-@font-face {
-  font-family: 'Brandon Grotesque';
-  src: url('assets/fonts/BrandonGrotesque-Regular.woff2') format('woff2'),
-       url('assets/fonts/BrandonGrotesque-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Brandon Grotesque';
-  src: url('assets/fonts/BrandonGrotesqueWeb-Medium.woff2') format('woff2'),
-       url('assets/fonts/BrandonGrotesqueWeb-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Brandon Grotesque';
-  src: url('assets/fonts/BrandonGrotesqueWeb-Black.woff2') format('woff2'),
-       url('assets/fonts/BrandonGrotesqueWeb-Black.woff') format('woff');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
-
 /* ===== Design Tokens (Aveeno palette) ===== */
 :root {
   --bg:         #ffffff;
@@ -64,7 +37,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Cabin', 'Helvetica Neue', Arial, sans-serif;
   background: var(--bg);
   color: var(--text-body);
   font-size: 15px;
@@ -80,6 +53,7 @@ a {
 
 a:hover {
   color: var(--link-hover);
+  text-decoration-color: var(--link-hover);
 }
 
 ::selection {
@@ -112,7 +86,7 @@ a:hover {
 }
 
 .nav-logo {
-  font-family: 'Brandon Grotesque', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-size: 15px;
   letter-spacing: 0.08em;
@@ -132,7 +106,7 @@ a:hover {
 }
 
 .nav-links a {
-  font-family: 'Brandon Grotesque', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 12px;
   letter-spacing: 0.1em;
@@ -240,7 +214,7 @@ main {
 }
 
 .hero-info .bio {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   color: var(--text-body);
   line-height: 1.85;
@@ -256,7 +230,7 @@ main {
 }
 
 .hero-links a {
-  font-family: 'Brandon Grotesque', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.1em;
@@ -288,7 +262,7 @@ main {
 .hero-info .bio a,
 .service-section a,
 .news-item a {
-  color: #5a7d6a;
+  color: #3d5c4a;
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-color: rgba(90, 125, 106, 0.35);
@@ -304,11 +278,11 @@ main {
 
 /* ===== Sections ===== */
 .section {
-  padding: 52px 0;
+  padding: 35px 0;
 }
 
 .section-title {
-  font-family: 'Brandon Grotesque', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 0.16em;
@@ -345,7 +319,7 @@ main {
 }
 
 .news-item {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   color: var(--text-body);
   line-height: 1.65;
@@ -358,7 +332,7 @@ main {
 }
 
 .news-date {
-  font-family: 'Brandon Grotesque', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.1em;
@@ -396,6 +370,7 @@ main {
 .pub-item:hover {
   border-left-color: var(--link);
   padding-left: 12px;
+  background: #faf5f1;
 }
 
 .pub-thumb {
@@ -446,12 +421,12 @@ main {
 }
 
 .pub-title a:hover {
-  color: #5a7d6a;
-  text-decoration-color: #5a7d6a;
+  color: #3d5c4a;
+  text-decoration-color: #3d5c4a;
 }
 
 .pub-authors {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 13.5px;
   color: var(--text-muted);
   line-height: 1.65;
@@ -472,8 +447,8 @@ main {
 }
 
 .pub-authors a:hover {
-  color: #5a7d6a;
-  text-decoration-color: #5a7d6a;
+  color: #3d5c4a;
+  text-decoration-color: #3d5c4a;
 }
 
 .pub-links {
@@ -500,8 +475,8 @@ main {
 }
 
 .pub-links a:hover {
-  color: var(--link-hover);
-  text-decoration-color: var(--link-hover);
+  color: #3d5c4a;
+  text-decoration-color: #3d5c4a;
 }
 
 .pub-links .sep {
@@ -510,7 +485,7 @@ main {
 }
 
 .pub-abstract {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   color: var(--text-muted);
   line-height: 1.65;
@@ -519,7 +494,7 @@ main {
 
 /* Earlier work toggle */
 .earlier-work-toggle {
-  font-family: 'Brandon Grotesque', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.1em;
@@ -624,7 +599,7 @@ main {
 }
 
 .badge {
-  font-family: 'Brandon Grotesque', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 11px;
   letter-spacing: 0.08em;
@@ -637,7 +612,7 @@ main {
 }
 
 .card-body .desc {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.6;
@@ -650,7 +625,7 @@ main {
 }
 
 .teaching-item {
-  padding: 16px 0;
+  padding: 12px 0;
   border-bottom: 1px solid var(--border);
   padding-left: 0;
   transition: padding-left var(--t);
@@ -667,15 +642,15 @@ main {
 .teaching-course {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 13px;
   color: var(--text);
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .teaching-meta {
-  font-family: 'Brandon Grotesque', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -683,7 +658,7 @@ main {
 
 /* ===== Misc / Service ===== */
 .service-section h3 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: var(--text-body);
@@ -715,7 +690,7 @@ footer {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 24px;
-  font-family: 'Brandon Grotesque', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
