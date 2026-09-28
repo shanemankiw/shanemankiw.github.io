@@ -11,14 +11,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
-    rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="index.css">
 </head>
 
+
+
+<body>
 <!-- Statcounter -->
 <script type="text/javascript">
   var sc_project = 13209083;
@@ -33,9 +33,6 @@
     </a>
   </div>
 </noscript>
-
-
-<body>
 
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
@@ -71,7 +68,7 @@
               Wenping Wang</a> and <a href="https://people.tamu.edu/~xinli/">Prof. Xin
               Li</a>. People call me John.</p>
               <p class="bio">
-                I am passionate about bringing intelligence to 3D and eventually the real world, through <strong>3D Generation</strong>, <strong>Physics-based Motion</strong>, and <strong>Robot Learning</strong>.
+                I am passionate about bringing intelligence to 3D and eventually the real world, through <strong>Robot Foundational Policies</strong>, <strong>Physics-based Motion</strong>, and <strong>3D Real-to-Sim</strong>.
               </p>
             <p class="bio">
               Previously, I obtained my B.Eng. and M.Eng. degrees from Shanghai Jiao Tong University, where I was
@@ -139,8 +136,8 @@
           <li class="news-item"><span class="news-date">AUG 2025</span> Wrapped up my amazing time with Sony, then presented at SIGGRAPH 2025 in Vancouver, Canada! 🇨🇦</li>
           <li class="news-item"><span class="news-date">MAY 2025</span> Started as a research intern at Sony in San Jose, CA! 🎮</li>
           <li class="news-item"><span class="news-date">OCT 2024</span> Attended ECCV 2024 in Milan, Italy! 🇮🇹</li>
-          <li class="news-item"><span class="news-date">JUL 2024</span> SO-SMPL is accepted by ECCV 2024. Thanks to all collaborators! 🎉</li>
           <li class="news-item"><span class="news-date">AUG 2024</span> Started as a Ph.D. student in Texas A&M! Gig 'em! 🎓</li>
+          <li class="news-item"><span class="news-date">JUL 2024</span> SO-SMPL is accepted by ECCV 2024. Thanks to all collaborators! 🎉</li>
           <li class="news-item"><span class="news-date">MAR 2024</span> Obtained my Masters degree from SJTU! Grateful for the amazing time! 🎓</li>
           <li class="news-item"><span class="news-date">FEB 2024</span> Started as a research intern at miHoYo in Shanghai! ✨</li>
         </ul>
@@ -149,12 +146,48 @@
 
     <!-- Publications -->
     <section class="section fade-in" id="publications">
-      <h2 class="section-title">Publications <span style="font-size: 14px; font-weight: 400; font-family: 'Montserrat', sans-serif; color: #707070; letter-spacing: 0; text-transform: none;">(* equal contribution)</span></h2>
+      <h2 class="section-title">Publications <span class="section-note">(* equal contribution)</span></h2>
 
       <div class="pub-list">
 
         <div class="pub-item">
-          <img class="pub-thumb" src="images/teaser_crop.gif" alt="PDT">
+          <div class="pub-thumb pub-thumb-video">
+            <video muted autoplay loop playsinline poster="images/humanoid_teaser_poster.jpg">
+              <source src="images/humanoid_teaser.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="pub-content">
+            <div class="pub-title">Steerable Humanoid Loco-Manipulation VLA</div>
+            <div class="pub-authors"><span class="me">Jionghao Wang</span>* (co-first author), et al.</div>
+            <div class="pub-links">
+              <span class="venue-label">In Submission</span>
+            </div>
+            <p class="pub-abstract">A humanoid policy steered by future goal images: a predictor turns subtask prompts into goal images, and a planner drives whole-body actions toward them across multi-task routines.</p>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-thumb pub-thumb-video">
+            <video muted autoplay loop playsinline poster="images/reward_teaser_poster.jpg">
+              <source src="images/reward_teaser.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="pub-content">
+            <div class="pub-title">Learning Dense Video Rewards from Disentangled Latent Dynamics</div>
+            <div class="pub-authors"><span class="me">Jionghao Wang</span>* (co-first author), et al.</div>
+            <div class="pub-links">
+              <span class="venue-label">In Submission</span>
+            </div>
+            <p class="pub-abstract">We learn dense rewards from action-free videos by modeling task-relevant latent dynamics, so the reward tracks task progress rather than visual distractors such as lighting.</p>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-thumb pub-thumb-video">
+            <video muted autoplay loop playsinline poster="images/PDT_teaser_poster.jpg" aria-label="PDT">
+              <source src="images/PDT_teaser.mp4" type="video/mp4">
+            </video>
+          </div>
           <div class="pub-content">
             <div class="pub-title"><a href="https://arxiv.org/abs/2507.18939" target="_blank">PDT: Point Distribution Transformation with Diffusion Models</a></div>
             <div class="pub-authors"><span class="me">Jionghao Wang</span>*, <a href="https://clinplayer.github.io/" target="_blank">Cheng Lin*</a>, <a href="https://liuyuan-pal.github.io/" target="_blank">Yuan Liu</a>, <a href="https://ruixu.me/" target="_blank">Rui Xu</a>, <a href="https://frank-zy-dou.github.io/" target="_blank">Zhiyang Dou</a>, <a href="https://www.xxlong.site/" target="_blank">Xiao-Xiao Long</a>, <a href="https://haoxiangguo.cn/" target="_blank">Hao-Xiang Guo</a>, <a href="https://i.cs.hku.hk/~taku/" target="_blank">Taku Komura</a>, <a href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html" target="_blank">Wenping Wang</a>, <a href="https://people.tamu.edu/~xinli/" target="_blank">Xin Li</a></div>
@@ -170,7 +203,11 @@
         </div>
 
         <div class="pub-item">
-          <img class="pub-thumb" src="images/SO-SMPL.gif" alt="SO-SMPL">
+          <div class="pub-thumb pub-thumb-video">
+            <video muted autoplay loop playsinline poster="images/SO-SMPL_poster.jpg" aria-label="SO-SMPL">
+              <source src="images/SO-SMPL.mp4" type="video/mp4">
+            </video>
+          </div>
           <div class="pub-content">
             <div class="pub-title"><a href="https://arxiv.org/abs/2312.05295" target="_blank">Disentangled Clothed Avatar Generation from Text Descriptions</a></div>
             <div class="pub-authors"><span class="me">Jionghao Wang</span>*, <a href="https://liuyuan-pal.github.io/" target="_blank">Yuan Liu*</a>, <a href="https://frank-zy-dou.github.io/" target="_blank">Zhiyang Dou</a>, <a href="https://yzmblog.github.io/" target="_blank">Zhengming Yu</a>, <a href="https://lyq.me/scholar" target="_blank">Yongqing Liang</a>, <a href="https://clinplayer.github.io/" target="_blank">Cheng Lin</a>, <a href="https://medialab.sjtu.edu.cn/" target="_blank">Rong Xie</a>, <a href="https://medialab.sjtu.edu.cn/author/li-song/" target="_blank">Li Song</a>, <a href="https://people.tamu.edu/~xinli/" target="_blank">Xin Li</a>, <a href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html" target="_blank">Wenping Wang</a></div>
@@ -186,8 +223,8 @@
 
         <div class="pub-item">
           <div class="pub-thumb pub-thumb-video">
-            <video muted autoplay loop playsinline>
-              <source src="images/PanoDiff.mp4" type="video/mp4">
+            <video muted autoplay loop playsinline poster="images/PanoDiff_960_poster.jpg">
+              <source src="images/PanoDiff_960.mp4" type="video/mp4">
             </video>
           </div>
           <div class="pub-content">
@@ -205,7 +242,7 @@
 
         <div class="pub-item">
           <div class="pub-thumb pub-thumb-video">
-            <video muted autoplay loop playsinline>
+            <video muted autoplay loop playsinline poster="images/rss_teaser_h264_poster.jpg">
               <source src="images/rss_teaser_h264.mp4" type="video/mp4">
             </video>
           </div>
@@ -213,14 +250,17 @@
             <div class="pub-title">Learning What Matters: Adaptive Information Theoretic Objectives for Robot Exploration</div>
             <div class="pub-authors"><a href="https://www.youwei-yu.com/" target="_blank">Youwei Yu</a>, <span class="me">Jionghao Wang</span>, <a href="https://yzmblog.github.io/" target="_blank">Zhengming Yu</a>, <a href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html" target="_blank">Wenping Wang</a>, <a href="https://vail-robotics.net/" target="_blank">Lantao Liu</a></div>
             <div class="pub-links">
-              <span class="venue-label">In Submission</span>
+              <span class="venue-label">RSS 2026</span><span class="sep">/</span>
+              <a href="https://arxiv.org/abs/2605.12084" target="_blank">Paper</a><span class="sep">/</span>
+              <a href="https://www.youwei-yu.com/qoed/" target="_blank">Project</a><span class="sep">/</span>
+              <a href="https://github.com/youwyu/QOED" target="_blank">Github</a>
             </div>
             <p class="pub-abstract">Developed QOED to enhance robot exploration by isolating identifiable model parameters and suppressing unidentifiable 'nuisance' directions in high-dimensional systems.</p>
           </div>
         </div>
 
         <div class="pub-item">
-          <img class="pub-thumb" src="images/teaser_refine_spgen.png" alt="SPGen">
+          <img class="pub-thumb" src="images/teaser_refine_spgen.jpg" alt="SPGen" loading="lazy" decoding="async">
           <div class="pub-content">
             <div class="pub-title"><a href="https://arxiv.org/abs/2509.12721" target="_blank">SPGen: Spherical Projection as Consistent and Flexible Representation for Single Image 3D Shape Generation</a></div>
             <div class="pub-authors"><a href="https://evergreen0929.github.io/" target="_blank">Jingdong Zhang</a>, <a href="https://chenweikai.github.io/" target="_blank">Weikai Chen</a>, <a href="https://liuyuan-pal.github.io/" target="_blank">Yuan Liu</a>, <span class="me">Jionghao Wang</span>, <a href="https://yzmblog.github.io/" target="_blank">Zhengming Yu</a>, <a href="https://mickshen7558.github.io/" target="_blank">Zhuowen Shen</a>, <a href="https://sites.google.com/site/boyanghome/home" target="_blank">Bo Yang</a>, <a href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html" target="_blank">Wenping Wang</a>, <a href="https://people.tamu.edu/~xinli/" target="_blank">Xin Li</a></div>
@@ -243,12 +283,12 @@
       <div class="cards">
         <article class="card compact">
           <div class="card-media logo">
-            <img src="images/Sony.png" alt="Sony logo" />
+            <img loading="lazy" src="images/Sony.png" alt="Sony logo" />
           </div>
           <div class="card-body">
             <div class="card-top">
               <h3 class="card-title">Research Intern</h3>
-              <span class="badge">2025 • San Jose, CA</span>
+              <span class="badge">2025 · San Jose, CA</span>
             </div>
             <p class="desc">Sony Corporation of America.</p>
           </div>
@@ -256,12 +296,12 @@
 
         <article class="card compact">
           <div class="card-media logo">
-            <img src="images/mihoyo.png" alt="miHoYo logo" />
+            <img loading="lazy" src="images/mihoyo.png" alt="miHoYo logo" />
           </div>
           <div class="card-body">
             <div class="card-top">
               <h3 class="card-title">Research Intern</h3>
-              <span class="badge">2024 • Shanghai, CN</span>
+              <span class="badge">2024 · Shanghai, CN</span>
             </div>
             <p class="desc">miHoYo (HoYoverse).</p>
           </div>
@@ -269,12 +309,12 @@
 
         <article class="card compact">
           <div class="card-media logo">
-            <img src="images/intel.png" alt="Intel logo" />
+            <img loading="lazy" src="images/intel.png" alt="Intel logo" />
           </div>
           <div class="card-body">
             <div class="card-top">
               <h3 class="card-title">Media Graphics Software Engineering Intern</h3>
-              <span class="badge">2021 • Shanghai, CN</span>
+              <span class="badge">2021 · Shanghai, CN</span>
             </div>
             <p class="desc">Intel Asia Pacific Development.</p>
           </div>

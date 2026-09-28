@@ -1,5 +1,6 @@
-/* ===== Web Fonts ===== */
-@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai:wght@400;700&display=swap');
+/* ===== Web Fonts =====
+   (loaded via <link> in index.html; the old @import of "LXGW WenKai" was a
+   dead, render-blocking request — that family does not exist on Google Fonts) */
 
 /* ===== Design Tokens (Aveeno palette) ===== */
 :root {
@@ -9,7 +10,10 @@
 
   --text:       #47322E;   /* Aveeno brown */
   --text-body:  #3d2e2a;
-  --text-muted: #8b7a74;
+  --text-muted: #7a6761;   /* was #8b7a74 (4.1:1) -> 5.3:1 on white, 4.7:1 on oat */
+  --bg-soft:    #faf5f1;   /* hover wash */
+  --accent:     #3d5c4a;   /* sage link colour, was hard-coded x5 */
+  --accent-line: rgba(61, 92, 74, 0.35);
 
   --link:       #47322E;
   --link-hover: #2b1f1c;
@@ -37,12 +41,13 @@ html {
 }
 
 body {
-  font-family: 'Cabin', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   background: var(--bg);
   color: var(--text-body);
   font-size: 15px;
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -167,7 +172,7 @@ main {
 
 /* ===== Hero ===== */
 .hero {
-  padding: 96px 0 56px;
+  padding: 104px 0 40px;
 }
 
 .hero-top {
@@ -198,10 +203,6 @@ main {
   letter-spacing: -0.02em;
   line-height: 1.2;
   margin-bottom: 6px;
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0;
 }
 
 .hero-info .chinese-name {
@@ -217,8 +218,9 @@ main {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   color: var(--text-body);
-  line-height: 1.85;
-  margin-top: 16px;
+  line-height: 1.8;
+  margin-top: 14px;
+  text-wrap: pretty;
   margin-bottom: 0;
 }
 
@@ -262,23 +264,24 @@ main {
 .hero-info .bio a,
 .service-section a,
 .news-item a {
-  color: #3d5c4a;
+  color: var(--accent);
   text-decoration: underline;
-  text-underline-offset: 2px;
-  text-decoration-color: rgba(90, 125, 106, 0.35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--accent-line);
   transition: color var(--t), text-decoration-color var(--t);
 }
 
 .hero-info .bio a:hover,
 .service-section a:hover,
 .news-item a:hover {
-  color: #3d5c4a;
-  text-decoration-color: #3d5c4a;
+  color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 /* ===== Sections ===== */
 .section {
-  padding: 35px 0;
+  padding: 40px 0;
 }
 
 .section-title {
@@ -288,10 +291,21 @@ main {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--text);
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   display: flex;
   align-items: center;
   gap: 14px;
+}
+
+.section-title .section-note {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12.5px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text-muted);
+  margin-left: -4px;
 }
 
 .section-title::after {
@@ -306,9 +320,14 @@ main {
   background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 8px 28px;
-  max-height: 280px;
+  padding: 6px 28px;
+  max-height: 300px;
   overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+  /* soft fade signals that the list scrolls */
+  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 40px), transparent);
+          mask-image: linear-gradient(to bottom, #000 calc(100% - 40px), transparent);
   overflow-x: hidden;
   overscroll-behavior-y: contain;
   -webkit-overflow-scrolling: touch;
@@ -316,15 +335,20 @@ main {
 
 .news-list {
   list-style: none;
+  padding-bottom: 28px;
 }
 
 .news-item {
   font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
+  font-size: 13.5px;
   color: var(--text-body);
-  line-height: 1.65;
-  padding: 10px 0;
+  line-height: 1.6;
+  padding: 11px 0;
   border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  column-gap: 14px;
+  align-items: baseline;
 }
 
 .news-item:last-child {
@@ -337,10 +361,9 @@ main {
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--link);
-  display: inline-block;
-  min-width: 78px;
-  margin-right: 6px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
 
 /* ===== Publications ===== */
@@ -349,46 +372,42 @@ main {
   flex-direction: column;
 }
 
+.pub-list {
+  gap: 4px;
+}
+
+/* Constant padding + negative margin: the hover wash no longer
+   shifts the whole entry sideways (old padding-left 0 -> 12px jump). */
 .pub-item {
   display: flex;
   gap: 24px;
   align-items: flex-start;
-  padding: 28px 0;
+  margin: 0 -14px;
+  padding: 20px 14px 20px 12px;
   border-left: 2px solid transparent;
-  padding-left: 0;
-  transition: border-left-color var(--t), padding-left var(--t);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  transition: border-left-color var(--t), background-color var(--t);
 }
 
-.pub-item:first-child {
-  padding-top: 0;
+@media (hover: hover) {
+  .pub-item:hover {
+    border-left-color: var(--link);
+    background: var(--bg-soft);
+  }
 }
 
-.pub-item:last-child {
-  border-bottom: none;
-}
-
-.pub-item:hover {
-  border-left-color: var(--link);
-  padding-left: 12px;
-  background: #faf5f1;
-}
-
-.pub-thumb {
-  flex-shrink: 0;
-  width: 300px;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  object-fit: contain;
-  display: block;
-}
-
+/* one frame for every teaser: 16:9, same size, same radius */
+.pub-thumb,
 .pub-thumb-video {
   flex-shrink: 0;
-  width: 300px;
+  width: 280px;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius);
   border: 1px solid var(--border);
+  background: var(--bg-alt);
+  object-fit: cover;
   overflow: hidden;
+  display: block;
 }
 
 .pub-thumb-video video {
@@ -408,8 +427,9 @@ main {
   font-weight: 600;
   font-size: 16px;
   color: var(--text);
-  line-height: 1.45;
-  margin-bottom: 5px;
+  line-height: 1.4;
+  margin-bottom: 6px;
+  text-wrap: balance;
 }
 
 .pub-title a {
@@ -421,8 +441,8 @@ main {
 }
 
 .pub-title a:hover {
-  color: #3d5c4a;
-  text-decoration-color: #3d5c4a;
+  color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 .pub-authors {
@@ -447,20 +467,25 @@ main {
 }
 
 .pub-authors a:hover {
-  color: #3d5c4a;
-  text-decoration-color: #3d5c4a;
+  color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 .pub-links {
   font-size: 13px;
-  margin-top: 5px;
+  margin-top: 6px;
+  display: flex;          /* flex swallows the stray spaces around .sep, */
+  flex-wrap: wrap;        /* so every separator gets identical spacing   */
+  align-items: baseline;
+  line-height: 1.7;
 }
 
 .pub-links .venue-label {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  font-size: 13px;
-  letter-spacing: 0.02em;
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--text);
 }
 
@@ -475,13 +500,13 @@ main {
 }
 
 .pub-links a:hover {
-  color: #3d5c4a;
-  text-decoration-color: #3d5c4a;
+  color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 .pub-links .sep {
   color: var(--border);
-  margin: 0 4px;
+  margin: 0 8px;
 }
 
 .pub-abstract {
@@ -490,6 +515,7 @@ main {
   color: var(--text-muted);
   line-height: 1.65;
   margin-top: 8px;
+  text-wrap: pretty;
 }
 
 /* Earlier work toggle */
@@ -564,7 +590,13 @@ main {
   background: var(--bg-alt);
 }
 
+.card-media.logo {
+  flex: 0 0 64px;
+  align-self: center;
+}
+
 .card-media.logo img {
+  display: block;
   width: 64px;
   height: 64px;
   object-fit: contain;
@@ -595,6 +627,7 @@ main {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-size: 15px;
+  line-height: 1.4;
   color: var(--text);
 }
 
@@ -616,6 +649,7 @@ main {
   font-size: 14px;
   color: var(--text-muted);
   line-height: 1.6;
+  margin: 0;
 }
 
 /* ===== Teaching ===== */
@@ -642,7 +676,7 @@ main {
 .teaching-course {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 14px;
   color: var(--text);
   margin-bottom: 2px;
 }
@@ -682,6 +716,7 @@ main {
 footer {
   background: var(--bg-alt);
   border-top: 1px solid var(--border);
+  margin-top: 32px;
   padding: 32px 0;
   text-align: center;
 }
@@ -779,12 +814,25 @@ footer {
     display: flex;
   }
 
+  .hero-info .bio {
+    text-align: left;       /* centred multi-line paragraphs read poorly */
+  }
+
+  .hero-links a {
+    flex: 1 1 auto;         /* rows fill the width evenly: no lone orphan button */
+    justify-content: center;
+  }
+
   .section {
-    padding: 40px 0;
+    padding: 32px 0;
   }
 
   .pub-item {
     flex-direction: column;
+    gap: 16px;
+    margin: 0;
+    padding: 20px 0;
+    border-left: none;
   }
 
   .pub-thumb,
@@ -792,13 +840,27 @@ footer {
     width: 100%;
   }
 
+  .news-box {
+    padding: 4px 18px;
+  }
+
+  .news-item {
+    grid-template-columns: 1fr;   /* date on its own line above the item */
+    row-gap: 2px;
+  }
+
   .card.compact {
-    flex-direction: column;
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .card-media.logo {
+    flex-basis: 48px;
   }
 
   .card-media.logo img {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
   }
 }
 
