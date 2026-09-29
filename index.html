@@ -68,7 +68,7 @@
               Wenping Wang</a> and <a href="https://people.tamu.edu/~xinli/">Prof. Xin
               Li</a>. People call me John.</p>
               <p class="bio">
-                I am passionate about bringing intelligence to 3D and eventually the real world, through <strong>Robot Foundational Policies</strong>, <strong>Physics-based Motion</strong>, and <strong>3D Real-to-Sim</strong>.
+                I am passionate about bringing intelligence to 3D and eventually the real world, through <strong>Robot Foundation Models</strong>, <strong>Physics-based Motion</strong>, and <strong>3D Real-to-Sim</strong>.
               </p>
             <p class="bio">
               Previously, I obtained my B.Eng. and M.Eng. degrees from Shanghai Jiao Tong University, where I was
@@ -132,7 +132,7 @@
     <section class="section fade-in" id="news">
       <h2 class="section-title">News</h2>
       <div class="news-box">
-        <ul class="news-list">
+        <ul class="news-list" id="news-list">
           <li class="news-item"><span class="news-date">AUG 2025</span> Wrapped up my amazing time with Sony, then presented at SIGGRAPH 2025 in Vancouver, Canada! 🇨🇦</li>
           <li class="news-item"><span class="news-date">MAY 2025</span> Started as a research intern at Sony in San Jose, CA! 🎮</li>
           <li class="news-item"><span class="news-date">OCT 2024</span> Attended ECCV 2024 in Milan, Italy! 🇮🇹</li>
@@ -141,6 +141,7 @@
           <li class="news-item"><span class="news-date">MAR 2024</span> Obtained my Masters degree from SJTU! Grateful for the amazing time! 🎓</li>
           <li class="news-item"><span class="news-date">FEB 2024</span> Started as a research intern at miHoYo in Shanghai! ✨</li>
         </ul>
+        <button class="news-more" id="news-more" aria-expanded="false" aria-controls="news-list">Show all news</button>
       </div>
     </section>
 
@@ -385,6 +386,11 @@
   </footer>
 
   <script>
+    document.getElementById('news-more').addEventListener('click', e => {
+      const open = document.getElementById('news-list').classList.toggle('expanded');
+      e.target.textContent = open ? 'Show less' : 'Show all news';
+      e.target.setAttribute('aria-expanded', open);
+    });
     document.getElementById('hamburger').addEventListener('click', () => {
       document.getElementById('nav-links').classList.toggle('open');
     });

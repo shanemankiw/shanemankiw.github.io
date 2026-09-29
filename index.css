@@ -320,22 +320,49 @@ main {
   background: var(--bg-alt);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 6px 28px;
-  max-height: 300px;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--border) transparent;
-  /* soft fade signals that the list scrolls */
-  -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 40px), transparent);
-          mask-image: linear-gradient(to bottom, #000 calc(100% - 40px), transparent);
-  overflow-x: hidden;
-  overscroll-behavior-y: contain;
-  -webkit-overflow-scrolling: touch;
+  padding: 6px 28px 14px;
 }
 
 .news-list {
   list-style: none;
-  padding-bottom: 28px;
+}
+
+/* collapsed: show the latest 4, the rest behind "Show all news" */
+.news-list:not(.expanded) .news-item:nth-child(n+5) {
+  display: none;
+}
+
+.news-list:not(.expanded) .news-item:nth-child(4) {
+  border-bottom: none;
+}
+
+.news-more {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 4px 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--border);
+  transition: color var(--t), text-decoration-color var(--t);
+}
+
+.news-more:hover {
+  color: var(--text);
+  text-decoration-color: currentColor;
+}
+
+.news-more:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 .news-item {
