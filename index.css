@@ -62,8 +62,26 @@ a:hover {
 }
 
 ::selection {
-  background: rgba(71, 50, 46, 0.1);
+  background: rgba(61, 92, 74, 0.22);   /* --accent, reads on white and on oat */
   color: var(--text);
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 1100;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  background: var(--btn-bg);
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+}
+
+.skip-link:focus {
+  top: 10px;
+  color: #ffffff;
 }
 
 /* ===== Navbar ===== */
@@ -92,7 +110,7 @@ a:hover {
 
 .nav-logo {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 15px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -152,7 +170,11 @@ a:hover {
   cursor: pointer;
   background: none;
   border: none;
-  padding: 4px;
+  width: 44px;
+  height: 44px;
+  margin-right: -8px;       /* bars keep their position inside the larger target */
+  align-items: center;
+  justify-content: center;
 }
 
 .hamburger span {
@@ -205,15 +227,6 @@ main {
   margin-bottom: 6px;
 }
 
-.hero-info .chinese-name {
-  font-family: 'LXGW WenKai', serif;
-  font-size: 22px;
-  font-weight: 400;
-  color: var(--text-muted);
-  margin-left: 12px;
-  letter-spacing: 2px;
-}
-
 .hero-info .bio {
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
@@ -222,6 +235,14 @@ main {
   margin-top: 14px;
   text-wrap: pretty;
   margin-bottom: 0;
+}
+
+.hero-status {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--accent);
 }
 
 .hero-links {
@@ -246,6 +267,8 @@ main {
   align-items: center;
   gap: 5px;
   transition: all var(--t);
+  -webkit-user-select: none;   /* buttons stay as they are when a text selection drags across them */
+  user-select: none;
 }
 
 .hero-links a:hover {
@@ -255,15 +278,18 @@ main {
   transform: translateY(-1px);
 }
 
+/* no white flash while a text selection is dragged across the buttons */
+.selecting .hero-links a {
+  pointer-events: none;
+}
+
 .hero-links svg {
   width: 13px;
   height: 13px;
   flex-shrink: 0;
 }
 
-.hero-info .bio a,
-.service-section a,
-.news-item a {
+.hero-info .bio a {
   color: var(--accent);
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -272,9 +298,7 @@ main {
   transition: color var(--t), text-decoration-color var(--t);
 }
 
-.hero-info .bio a:hover,
-.service-section a:hover,
-.news-item a:hover {
+.hero-info .bio a:hover {
   color: var(--accent);
   text-decoration-color: var(--accent);
 }
@@ -437,6 +461,63 @@ main {
   display: block;
 }
 
+.pub-thumb-video {
+  position: relative;
+}
+
+.thumb-link {
+  position: absolute;
+  inset: 0;
+}
+
+.pub-thumb-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-toggle {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--btn-hover);
+  color: #ffffff;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity var(--t);
+}
+
+.video-toggle svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pub-item:hover .video-toggle,
+.video-toggle.is-paused,
+.video-toggle:focus-visible {
+  opacity: 1;
+}
+
+.video-toggle:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: -4px;
+}
+
+@media (hover: none) {
+  .video-toggle {
+    opacity: 0.85;
+  }
+}
+
 .pub-thumb-video video {
   width: 100%;
   height: 100%;
@@ -463,7 +544,7 @@ main {
   color: var(--text);
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-color: transparent;
+  text-decoration-color: var(--accent-line);
   transition: color var(--t), text-decoration-color var(--t);
 }
 
@@ -517,12 +598,13 @@ main {
 }
 
 .pub-links a {
+  padding: 1px 0;         /* 24px target */
   font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   color: var(--link);
   text-decoration: underline;
   text-underline-offset: 2px;
-  text-decoration-color: transparent;
+  text-decoration-color: var(--accent-line);
   transition: color var(--t), text-decoration-color var(--t);
 }
 
@@ -543,50 +625,6 @@ main {
   line-height: 1.65;
   margin-top: 8px;
   text-wrap: pretty;
-}
-
-/* Earlier work toggle */
-.earlier-work-toggle {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  cursor: pointer;
-  background: none;
-  border: 1px solid var(--border);
-  padding: 8px 16px;
-  border-radius: var(--radius);
-  margin-top: 16px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: border-color var(--t), color var(--t);
-}
-
-.earlier-work-toggle:hover {
-  border-color: var(--link);
-  color: var(--link);
-}
-
-.earlier-work-toggle .arrow {
-  font-size: 10px;
-  transition: transform var(--t);
-}
-
-.earlier-work-toggle.open .arrow {
-  transform: rotate(180deg);
-}
-
-.earlier-work {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
-}
-
-.earlier-work.open {
-  max-height: 2000px;
 }
 
 /* ===== Internships ===== */
@@ -688,16 +726,10 @@ main {
 .teaching-item {
   padding: 12px 0;
   border-bottom: 1px solid var(--border);
-  padding-left: 0;
-  transition: padding-left var(--t);
 }
 
 .teaching-item:last-child {
   border-bottom: none;
-}
-
-.teaching-item:hover {
-  padding-left: 8px;
 }
 
 .teaching-course {
@@ -718,25 +750,12 @@ main {
 }
 
 /* ===== Misc / Service ===== */
-.service-section h3 {
+.service-section p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: var(--text-body);
   line-height: 1.8;
-}
-
-.service-list {
-  list-style: none;
-  font-size: 15px;
-  color: var(--text-body);
-  line-height: 1.9;
-}
-
-.service-list li::before {
-  content: '—';
-  margin-right: 10px;
-  color: var(--border);
 }
 
 /* ===== Footer ===== */
@@ -773,18 +792,48 @@ footer {
   margin-top: 6px;
   font-size: 11px;
   color: var(--text-muted);
+  text-transform: none;   /* the WeChat ID must keep its real case */
+  letter-spacing: 0.04em;
 }
 
-/* ===== Fade-in animation ===== */
-.fade-in {
+/* ===== Fade-in animation =====
+   Only hidden once JS has marked the page: without JS the content stays visible */
+.js .fade-in {
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.fade-in.visible {
+.js .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .js .fade-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero-links a:hover {
+    transform: none;
+  }
+
+  .nav-links a::after {
+    transition: none;
+  }
+}
+
+@media print {
+  .js .fade-in {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* ===== Responsive: tablet ===== */
@@ -811,12 +860,6 @@ footer {
     justify-content: center;
   }
 
-  .hero-info .chinese-name {
-    display: block;
-    margin-left: 0;
-    margin-top: 4px;
-  }
-
   .hero-links {
     justify-content: center;
   }
@@ -835,6 +878,11 @@ footer {
 
   .nav-links.open {
     display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 14px;
   }
 
   .hamburger {
